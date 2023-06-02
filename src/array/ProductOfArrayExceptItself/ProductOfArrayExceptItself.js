@@ -17,7 +17,7 @@ export default function ProductOfArrayExceptItself(nums){
         if(i === 0) {
             prefix[i] = 1
         } else {
-            // else, multiply nums[i-1]* prefix[i]
+            // else, multiply nums[i-1]* prefix[i-1]
             prefix[i] = nums[i-1] * prefix[i-1]
         }
     }
