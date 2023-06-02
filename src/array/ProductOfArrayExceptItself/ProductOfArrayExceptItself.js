@@ -40,6 +40,7 @@ export default function ProductOfArrayExceptItself(nums){
 
     const result = [];
     for(let i = 0; i < nums.length; i++){
+        // result = prefix * suffix
         result[i] = prefix[i] * suffix[i]
     }
     return result;
