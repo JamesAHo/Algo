@@ -1,7 +1,7 @@
 import isPowerOfTwo from '../isPowerOfTwo';
 
 // begin test
-describe('sPowerOfTwo', () => {
+describe('isPowerOfTwo', () => {
     it('Should calculate if the number can divide itself', () => {
         expect(isPowerOfTwo(-1)).toBe(false);
         expect(isPowerOfTwo(4)).toBe(true);
