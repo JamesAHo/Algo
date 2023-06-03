@@ -13,11 +13,11 @@ export default function ValidSudoku(board) {
     // iterate through the row and col'
     for(let i = 0; i < 9; i++){
         // iterate col
-        for(let j = 0; j < 9; j ++){
+        for(let j = 0; j < 9; j++){
             const value = board[i][j]
             if(value != '.'){
                 if(!set.add(`${value} at row ${i}`) || !set.add(`${value} at col ${j}`) ||
-                set.add(`${value} at box ${Math.floor(i/3),Math.floor(j/3)} `)
+                set.add(`${value} at box ${Math.floor(i/3)}, ${Math.floor(j/3)}`)
                 ){
                     return false
                 }
