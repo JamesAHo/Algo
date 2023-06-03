@@ -10,10 +10,12 @@
 export default function ValidSudoku(board) {
     // create a new  set
     let set = new Set()
+    // i = row and j = column
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board.length; j++) {
+            // the current value
             const value = board[i][j]
-
+            // if value is empty => continue
             if (value !== ".") {
                 const row = `${value} at row ${i}`
                 const column = `${value} at column ${j}`
@@ -30,5 +32,5 @@ export default function ValidSudoku(board) {
         }
     }
 
-    return true
+    return true;
 }
