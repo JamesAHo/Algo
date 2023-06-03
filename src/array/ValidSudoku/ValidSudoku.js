@@ -9,20 +9,26 @@
 
 export default function ValidSudoku(board) {
     // create a new  set
-    const set = new Set()
-    // iterate through the row and col'
-    for(let i = 0; i < 9; i++){
-        // iterate col
-        for(let j = 0; j < 9; j++){
+    let set = new Set()
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board.length; j++) {
             const value = board[i][j]
-            if(value != '.'){
-                if(!set.add(`${value} at row ${i}`) || !set.add(`${value} at col ${j}`) ||
-                set.add(`${value} at box ${Math.floor(i/3)}, ${Math.floor(j/3)}`)
-                ){
+
+            if (value !== ".") {
+                const row = `${value} at row ${i}`
+                const column = `${value} at column ${j}`
+                const box = `${value} at box ${Math.floor(i/3)}, ${Math.floor(j/3)}`
+                console.log(`${box}`)
+                if (set.has(row) || set.has(column) || set.has(box)) {
                     return false
+                } else {
+                    set.add(row)
+                    set.add(column)
+                    set.add(box)
                 }
             }
         }
     }
-    return true;
+
+    return true
 }

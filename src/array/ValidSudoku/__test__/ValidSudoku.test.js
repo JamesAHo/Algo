@@ -2,7 +2,7 @@ import ValidSudoku from "../ValidSudoku";
 // Begin test
 describe("validSudoku", () => {
     it('should return if the ssudoku is valid', () => {
-        expect(validSudoku([["5","3",".",".","7",".",".",".","."]
+        expect(ValidSudoku([["5","3",".",".","7",".",".",".","."]
         ,["6",".",".","1","9","5",".",".","."]
         ,[".","9","8",".",".",".",".","6","."]
         ,["8",".",".",".","6",".",".",".","3"]
