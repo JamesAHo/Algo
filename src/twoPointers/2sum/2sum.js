@@ -18,5 +18,5 @@ export default function TwoSum(nums, target){
             right--;
         }
     }
-    return [];
+    return;
 }
