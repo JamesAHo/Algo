@@ -8,12 +8,12 @@ export default function maxArea(height){
     let left  = 0;
     let right = height.length  - 1;
     while(left < right){
-        area = Math.max(area, Math.min(height[screenLeft,height[right]] * (right - left)))
+        area = Math.max(area, Math.min(height[left],height[right]) *(right - left))
         if(height[left] <= height[right]){
-            left++
+            left++;
         }else{
-            right++
+            right--;
         }
     }
-    return area
+    return area;
 }
