@@ -31,9 +31,9 @@ export default function trap(height){
     let n = height.length;
     if(n.length <= 2) return 0;
     let left = 1, right = n - 2;
-    let maxleft = height[0], maxright = n - 1
+    let maxleft = height[0], maxright = height[n - 1]
     let result = 0;
-    while(left < right){
+    while(left <= right){
         if(maxleft < maxright){
             if(height[left] > maxleft){
                 maxleft = height[left]
