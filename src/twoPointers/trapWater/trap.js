@@ -10,7 +10,8 @@
     // maxRight is positioned at height - 1
 // Two Pointer Approach so Time Complexity should be O(N) and S.C is O(1);
     // Run a while loop from left to right
-        // Inside while loop check the conditions that make water trapped
+    // Inside while loop check the conditions that make water trapped
+        // while left < right
             // If maxLeft < maxRight
                     //if the current height[left] is > maxLeft
                         // then maxLeft = current height[left]
@@ -29,6 +30,26 @@ export default function trap(height){
     // edge case if the array is <= 2 return 0
     let n = height.length;
     if(n.length <= 2) return 0;
-    // 
+    let left = 1, right = n - 2;
+    let maxleft = height[0], maxright = n - 1
+    let result = 0;
+    while(left < right){
+        if(maxleft < maxright){
+            if(height[left] > maxleft){
+                maxleft = height[left]
+            }else{
+                result += maxleft - height[left]
+            }
+            left++
+        }else{
+            if(height[right] > maxright){
+                maxright = height[right]
+            }else{
+                result += maxright - height[right]
+            }
+            right--
+        }
+    }
+    return result;
 
 }
