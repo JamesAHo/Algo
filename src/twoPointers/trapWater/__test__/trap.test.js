@@ -11,3 +11,8 @@ describe('trap', () => {
         expect(trap([0,1])).toStrictEqual(0);
     })
 })
+describe('trap', () => {
+    it('should return 6', () => {
+        expect(trap([10,1,11])).toStrictEqual(9);
+    })
+})
