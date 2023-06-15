@@ -25,5 +25,19 @@
 // return maxProfit
     
 export default function(prices){
-
+    // left = buy and right = sell
+    let left = 0;
+    let right = 1;
+    let maxProfit = 0;
+    while(right < prices.length){
+        if(prices[left] < prices[right]){
+            let profit = prices[right] - prices[left];
+            // update maxProfit along the way
+            maxProfit = Math.max(maxProfit,profit)
+        }else{
+            left = right;
+        }
+        right++
+    }
+    return maxProfit;
 }
