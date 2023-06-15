@@ -7,6 +7,16 @@
  * @return {number}
  */
 
+// pseudo code:
+// some of the algorithm is related to Kadane's Algorithm
+// solve edge cases where if no profit return 0
+    // first case is if(prices.length < 1) return 0 or maxProfit should be 0.
+// Using two pointers to identify left and right
+    // since buying on day 2 and sell on day 1 is not allowed because we must buy stock first before sell
+    // thus left = buy =  0
+    // right = sell = 1
+// while loop through the array starting at sell position
+    // compare the price left and right
 export default function(prices){
-    
+
 }
