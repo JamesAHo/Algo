@@ -30,12 +30,12 @@ export default function(prices){
     let right = 1;
     let maxProfit = 0;
     while(right < prices.length){
-        if(prices[left] < prices[right]){
+        if(prices[left] > prices[right]){
+            left = right
+        }else{
             let profit = prices[right] - prices[left];
             // update maxProfit along the way
             maxProfit = Math.max(maxProfit,profit)
-        }else{
-            left = right;
         }
         right++
     }
