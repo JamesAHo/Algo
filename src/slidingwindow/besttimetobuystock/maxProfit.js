@@ -33,6 +33,7 @@ export default function(prices){
         if(prices[left] > prices[right]){
             left = right
         }else{
+            // profit = prices[right] - prices[left]
             let profit = prices[right] - prices[left];
             // update maxProfit along the way
             maxProfit = Math.max(maxProfit,profit)
