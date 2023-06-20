@@ -21,7 +21,7 @@ export default function longestSubString(s){
             left++
         }
         // otherwise add character to hash map
-        set.add[s[i]];
+        set.add(s[i]);
         // then find maxSize
         maxSize = Math.max(maxSize, i - left + 1)
     }
