@@ -19,12 +19,12 @@
         // else return false
     // if stack.length === 0 this string is valid
 export default function isValid(s){
-	let hashMap = { "(": ")","[": "]","{": "}"};
+    let hashMap = { "(": ")","[": "]","{": "}"};
     let stack = [];
-    for(let i in s){
+    for(let i of s){
         if(hashMap[i]){
             stack.push(hashMap[i]);
-        }else if(stack.length > 0 || stack[stack.length - 1] === i){
+        }else if(stack.length > 0 && stack[stack.length - 1] === i){
             stack.pop()
         }else{
             return false;
