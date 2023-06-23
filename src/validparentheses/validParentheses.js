@@ -10,16 +10,25 @@
 // Using stack method to store the valid string
 // open brackets including openBrackets = ["(","{","["]; 
 // close brackets including openBrackets = ["(","{","["];
+// Examples
+    // [{},(), (()]
+    //  ---i
+    // if open bracket are found, push closing bracket to stack;
+        // else if stack.length > 0 || stack[stack.lengh - 1] === i
+            // stack.pop
+        // else return false
+    // if stack.length === 0 this string is valid
 export default function isValid(s){
-	let openBracket = ["(","{","["];
-	let closeBracket = ["(","{","["];
-	let stack = [];
-	for(let i = 0; i < s.length;i++){
-		if(s[i].includes[openBracket]){
-			stack.push(s[i])	
-		}else{
-			
-	}		
-}	
-
+	let hashMap = { "(": ")","[": "]","{": "}"};
+    let stack = [];
+    for(let i in s){
+        if(hashMap[i]){
+            stack.push(hashMap[i]);
+        }else if(stack.length > 0 || stack[stack.length - 1] === i){
+            stack.pop()
+        }else{
+            return false;
+        }
+    }
+    return stack.length === 0
 };
