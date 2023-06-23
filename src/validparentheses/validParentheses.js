@@ -19,16 +19,31 @@
         // else return false
     // if stack.length === 0 this string is valid
 export default function isValid(s){
-    let hashMap = { "(": ")","[": "]","{": "}"};
-    let stack = [];
-    for(let i of s){
-        if(hashMap[i]){
-            stack.push(hashMap[i]);
-        }else if(stack.length > 0 && stack[stack.length - 1] === i){
-            stack.pop()
-        }else{
-            return false;
+    let stack = []
+    for(let char of s){
+        if(char == '('){
+            stack.push(')');
+        } else if(char == '{'){
+            stack.push('}')
+        } else if(char == '['){
+            stack.push(']')
+        } else if(stack.length === 0 || stack.pop() != char){
+            return false
         }
     }
     return stack.length === 0
+    }
+
+    // let hashMap = { "(": ")","[": "]","{": "}"};
+    // let stack = [];
+    // for(let i of s){
+    //     if(hashMap[i]){
+    //         stack.push(hashMap[i]);
+    //     }else if(stack.length > 0 && stack[stack.length - 1] === i){
+    //         stack.pop()
+    //     }else{
+    //         return false;
+    //     }
+    // }
+    // return stack.length === 0
 };

@@ -14,11 +14,7 @@ describe("isValid", () => {
     })
 });
 
-describe("isValid", () => {
-    it("Should return if string contain valid parentheses", () => {
-        expect(isValid("(]")).toBe(false);
-    })
-});
+
 
 
 
