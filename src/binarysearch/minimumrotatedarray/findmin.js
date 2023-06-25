@@ -20,16 +20,13 @@
         // if min number lies on the left half of the array
         // right = mid
 // return the min number which nums[left]
-export function findmin(nums){
+export default function findmin(nums){
     let left = 0;
     let right = nums.length  - 1;
     while(left < right){
         let mid = Math.floor((left + right) / 2);
-        if(nums[mid] >= nums[right]){
-            left = nums[mid] + 1;
-        } else{
-            right = mid;
-        }
+        nums[mid] >= nums[right] ? left = mid + 1 : right = mid
     }
-    return nums[left];
+    return nums[left]
+   
 }
