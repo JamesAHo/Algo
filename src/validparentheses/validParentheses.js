@@ -46,4 +46,4 @@ export default function isValid(s){
     //     }
     // }
     // return stack.length === 0
-};
+
