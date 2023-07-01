@@ -36,6 +36,7 @@ export default function(prices){
             // profit = prices[right] - prices[left]
             let profit = prices[right] - prices[left];
             // update maxProfit along the way
+            // Kadane's algo
             maxProfit = Math.max(maxProfit,profit)
         }
         right++
