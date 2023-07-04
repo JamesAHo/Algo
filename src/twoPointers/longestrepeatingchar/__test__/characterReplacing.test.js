@@ -3,7 +3,7 @@ import characterReplacement from "../characterReplacement";
 
 describe('the longest repeating character replacement', () => {
     it('Should return character replacement', () => {
-        expect(characterReplacement("AABABBA",1)).toBe(4)
+        expect(characterReplacement("AABABBA",1)).toStrictEqual(4)
     })
     
 })
