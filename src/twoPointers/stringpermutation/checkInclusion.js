@@ -6,7 +6,7 @@
 
 export default function checkInclusion(s1, s2) {
     let s1Count = new Map()
-    let s2Count = {};
+    let s2Count = new Map()
     //  iterate over s1 and update s1Map to store the frequency count of each character in s1.
     for(let char of s1) {
         s1Count.set(char, (s1Count.get(char) || 0) + 1);
