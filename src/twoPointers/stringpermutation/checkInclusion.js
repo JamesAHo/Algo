@@ -8,8 +8,8 @@ export default function checkInclusion(s1, s2) {
     let s1Count = new Map()
     let s2Count = {};
     //  iterate over s1 and update s1Map to store the frequency count of each character in s1.
-    for(let val of s1) {
-        s1Count[val] = (s1Count[val] || 0) + 1;
+    for(let char of s1) {
+        s1Count.set(char, (s1Count.get(char) || 0) + 1);
     }
     // starting sliding window
     let left = 0;
@@ -41,7 +41,9 @@ export default function checkInclusion(s1, s2) {
             left++
         }
         // if count = 0, permutation is true
-        if(count === 0) return true;
+        if(count === 0){
+            return true;
+        }
         right++
     }
     return false;
