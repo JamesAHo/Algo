@@ -6,3 +6,9 @@ describe('The strings if permutated', () => {
     })
     
 })
+describe('The strings if permutated', () => {
+    it('Should return true of string is permutated', () => {
+        expect(checkInclusion("hello","ooolleoooleh")).toBe(true);
+    })
+    
+})

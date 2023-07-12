@@ -36,7 +36,7 @@ export default function checkInclusion(s1, s2) {
                if(s2Count.get(leftChar) === s1Count.get(leftChar)){
                 count++;
                }
-               s2Map.set(leftChar, s2Count.get(leftChar) - 1);
+               s2Count.set(leftChar, s2Count.get(leftChar) - 1);
             }
             left++
         }
