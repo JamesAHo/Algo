@@ -12,3 +12,9 @@ describe('The strings if permutated', () => {
     })
     
 })
+describe('The strings if permutated', () => {
+    it('Should return false becase s2 is < than s1', () => {
+        expect(checkInclusion("hello","sdd")).toBe(false);
+    })
+    
+})

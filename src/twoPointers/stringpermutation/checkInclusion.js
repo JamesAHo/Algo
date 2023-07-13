@@ -18,8 +18,9 @@ export default function checkInclusion(s1, s2) {
     while(right < s2.length){
         // expand the window
         const char = s2[right];
-        // If the character is present in s1Map, we update s2Map to track its frequency count in the current window. If the frequency count of the character in s2Map is less than or equal to the frequency count of the character in s1Map, we decrement count since we have found a match for that character.
+        // check if char is in s1Count
         if(s1Count.has(char)){
+            // if it is updatew s2Count 
             s2Count.set(char, (s2Count[char] || 0) + 1);
             // check if the frequency count of char in s2Count is less than or the equal to the freq count of chat in s1Count
             if(s2Count.get(char) <= s1Count.get(char)){
@@ -28,6 +29,7 @@ export default function checkInclusion(s1, s2) {
         }
         // Shrink the window
         if(right - left + 1 >= s1.length){
+            // If it is, check if count is equal to the length of s1. If so, we have found a permutation, return true
            if(count === s1.length) {
             return true
            }
@@ -41,7 +43,7 @@ export default function checkInclusion(s1, s2) {
         
             left++
         }
-        // if count = 0, permutation is true
+        
         right++
     }
     return false;
