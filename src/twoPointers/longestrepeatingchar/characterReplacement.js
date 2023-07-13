@@ -10,7 +10,7 @@
 export default function characterReplacement(s,k){
 	let freqCount = {}
 	let left = 0;
-	let right =0;
+	let right = 0;
 	let longest = 0;
 	let maxFreq = 0;
 
@@ -23,13 +23,17 @@ export default function characterReplacement(s,k){
 		// find the maxFreq
 		maxFreq = Math.max(maxFreq,freqCount[rightChar]);
 		// work on the valid window
+		// if the total length - max count is > than k then window is not valid
 		while((right - left + 1) - maxFreq > k) {
 			const leftChar = s.charAt(left)
 			freqCount[leftChar] -= 1
+			// if not valid, increement left++
 			left++;
 		}
 
 		longest = Math.max(longest, right - left + 1);
+		// move window to right
+		
 		right++
 	}
 	return longest;
