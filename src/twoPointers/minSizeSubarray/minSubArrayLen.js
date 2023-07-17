@@ -11,10 +11,14 @@ export default function minSizeSubArrayLen(target, nums){
 
 
      while(right < nums.length){
+        // add the next number to sum
         sum += nums[right];
         //  if sum >= target return the minimum length
+        // valid window
         if(sum >= target){
+            // update the minLenth
             minLength = Math.min(minLength,right - left + 1);
+            // shift left and remove the left most value from sum sum = sum - nums[left]
             sum -= nums[left]
             left++
         }
