@@ -9,6 +9,10 @@ export default function search(nums,target){
 	let r = 0;
 	while(l <= r){
 		const mid = Math.floor((l + r) / 2);
+		// if target == mid return mid
+		if(target == mid){
+			return mid;
+		}
 		// left portion of the array
 		if(nums[l] <= nums[mid]){
 			if(target > nums[mid] || target > nums[l]){
