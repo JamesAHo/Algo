@@ -4,34 +4,35 @@
  *    * @return {number}
  **/
 export default function search(nums,target){
-	// created left and right variables
 	let l = 0;
-	let r = 0;
-	while(l <= r){
-		const mid = Math.floor((l + r) / 2);
-		// if target == mid return mid
-		if(target == mid){
-			return mid;
-		}
-		// left portion of the array
-		if(nums[l] <= nums[mid]){
-			if(target > nums[mid] || target > nums[l]){
-				l = mid + 1;
-			}else{
-				r = mid - 1;
-			}
-		// right portion of the array
-		}else{
-			if(target < nums[mid] || target > nums[l]){
-				r = mid - 1;
-			}else{
-				l = mid + 1;
-			}
-		}
+    let r = nums.length - 1;
 
+    while (l <= r) {
+        const mid = Math.floor((l + r) / 2);
 
-	}
-	return -1;
+        if (nums[mid] === target) {
+            return mid;
+        }
 
+        if (nums[l] <= nums[mid]) {
+            // Left half is sorted
+
+            if (nums[l] <= target && target < nums[mid]) {
+                r = mid - 1;
+            } else {
+                l = mid + 1;
+            }
+        } else {
+            // Right half is sorted
+
+            if (nums[mid] < target && target <= nums[r]) {
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+    }
+
+    return -1;
 }
 
