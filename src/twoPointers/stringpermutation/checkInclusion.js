@@ -34,6 +34,7 @@ export default function checkInclusion(s1, s2) {
             return true
            }
            const leftChar = s2[left];
+           // check if leftChar is present in s1Count
            if(s1Count.has(leftChar)){
                 if(s2Count.get(leftChar) <= s1Count.get(leftChar)){
                     count--;
