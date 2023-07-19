@@ -22,4 +22,5 @@ export default function minEatingSpeed(piles,h){
     }
     return res
 }
-
+// Space Complexity O(1)
+// Time Complexity O(Olog(N))
