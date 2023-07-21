@@ -19,6 +19,15 @@ const treeIncludes = (root, target) =>{
     return false
 }
 
+// RECURSIVE VERSION 
+const treeIncludes2 = (root, target) =>{
+    // if root is null return false
+    if(root === null) return false;
+    // if root is target return true
+    if(root.val === target) return true
+    return treeIncludes2(root.left,target) || treeIncludes2(root.right,target);
+}
+
 const a = new Node("a");
 const b = new Node("b");
 const c = new Node("c");
