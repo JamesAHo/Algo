@@ -24,7 +24,7 @@ const treeIncludes2 = (root, target) =>{
     // if root is null return false
     if(root === null) return false;
     // if root is target return true
-    if(root.val === target) return true
+    if(root.val === target) return true;
     return treeIncludes2(root.left,target) || treeIncludes2(root.right,target);
 }
 
