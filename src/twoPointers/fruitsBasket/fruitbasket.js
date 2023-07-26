@@ -9,21 +9,22 @@ export default function totalFruit(fruits){
     let basket = new Map();
     let ans = 0
     while(right < fruits.length){
+        // add fruit into basket 
         basket.set(fruits[right],(fruits[right] || 0) + 1);
         
-        // valid window condition
+        // valid window condition if basket > 0
         while(basket.size > 2){
             const leftFruit = fruits[left];
             const count = basket.get(leftFruit);
             if(count === 0){
-                basket.delete(leftFruit)
+                basket.delete(leftFruit);
             }else{
-                basket.set(leftFruit, count -1)
+                basket.set(leftFruit, count -1);
             }
-            left++
+            left++;
         }
-        right++
-        ans = Math.max(ans,right - left)
+        right++;
+        ans = Math.max(ans,right - left);
     }
-    return ans
+    return ans;
 }
