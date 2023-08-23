@@ -1,12 +1,4 @@
 
-const graph = {
-    f: [g,i],
-    g: [h],
-    h: [],
-    i: [g,k],
-    j: [j],
-    k: []
-}
 
 // n = # of nodes
 // e = # of edges
@@ -24,4 +16,16 @@ export default function hasPath(graph, source, dst){
 
     }
     return false
+}
+// this solution using  BFS traversal
+export default function hasPath2(graph, source,dst){
+    let queue = [ source ];
+    while(queue.length > 0) {
+        const current = queue.shift();
+        if(current === dst) return true;
+        for(let neighbor of graph[current]){
+            queue.push(neighbor);
+        }
+    }
+    return false;
 }
