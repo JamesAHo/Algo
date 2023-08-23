@@ -1,0 +1,2 @@
+import hasPath from "../hasPath";
+
