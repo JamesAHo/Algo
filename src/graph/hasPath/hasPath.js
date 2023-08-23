@@ -14,6 +14,6 @@ const graph = {
 // space complexity is O(n)
 // using DFS traversal 
 
-export default function hasPath(graph, source, graph){
+export default function hasPath(graph, source, dst){
 
 }
