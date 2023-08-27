@@ -22,4 +22,20 @@ export default function numberIsland(grid){
 }
 
 
+export default function traverse(grid,r,c,visited){
+    // check if row is in bound
+    const validRow = 0 <= r && r < grid.length;
+    const validCol = 0 <= c && c < grid[0].length;
+    if(!validRow || validCol) return false;
+    // if node is at 0 return false;
+    if(grid[r][c] === '0') return false;
+    // current positions
+    const pos = r + ',' + c;
+    visited.add(pos)
+    // traverse to all neighbor nodes
+    traverse(gird,r-1, c, visited);
+    traverse(gird,r+1, c, visited);
+    traverse(gird,r, c + 1, visited);
+    traverse(gird,r, c - 1, visited)
 
+}
