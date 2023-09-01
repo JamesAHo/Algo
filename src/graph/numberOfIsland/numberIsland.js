@@ -12,7 +12,7 @@ export default function numberIsland(grid){
         for(let c = 0; c < grid[0].length;c++){
             // traverse through the grid with cow col and visited nodes
             if(traverse(grid,r,c,visited) === true){
-                count++
+                count++;
             }
         }
     }
