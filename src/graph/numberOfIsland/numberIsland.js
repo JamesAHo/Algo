@@ -36,7 +36,7 @@ export default function traverse(grid,r,c,visited){
     traverse(gird,r-1, c, visited);
     traverse(gird,r+1, c, visited);
     traverse(gird,r, c + 1, visited);
-    traverse(gird,r, c - 1, visited)
+    traverse(gird,r, c - 1, visited);
     return true;
     
 }
