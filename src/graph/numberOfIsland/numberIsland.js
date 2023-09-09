@@ -31,7 +31,7 @@ export default function traverse(grid,r,c,visited){
     if(grid[r][c] === '0') return false;
     // current positions
     const pos = r + ',' + c;
-    visited.add(pos)
+    visited.add(pos);
     // traverse to all neighbor nodes
     traverse(gird,r-1, c, visited);
     traverse(gird,r+1, c, visited);
