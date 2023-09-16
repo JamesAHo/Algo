@@ -14,13 +14,13 @@ export default function minEatingSpeed(piles,h){
             hours += Math.ceil(p / k);
         }
         if(hours <= h){
-            res = Math.min(res, k)
+            res = Math.min(res, k);
             r = k - 1
         }else{
             l = k + 1
         }
     }
-    return res
+    return res;
 }
 // Space Complexity O(1)
 // Time Complexity O(Olog(N))
