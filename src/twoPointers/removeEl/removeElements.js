@@ -6,7 +6,8 @@ export default function removeElements(nums,val){
     while(l <= r){
         if(nums[l] === val){
             nums[l] = nums[r];
-            right++
+            // decrease right
+            right--
         }else{
             left++
         }
