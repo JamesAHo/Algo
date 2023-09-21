@@ -7,10 +7,10 @@ export default function removeElements(nums,val){
         if(nums[l] === val){
             nums[l] = nums[r];
             // decrease right
-            right--
+            r--
         }else{
-            left++
+            l++
         }
     }
-    return left;
+    return l;
 }
