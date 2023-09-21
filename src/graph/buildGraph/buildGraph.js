@@ -9,7 +9,7 @@ export default function buildGraph(edges){
         if(!(a in graph)) graph[a] = [];
         if(!(b in graph)) graph[b] = [];
         graph[a].push(b);
-        graph[b].push(a)
+        graph[b].push(a);
     }
     return graph;
 }
