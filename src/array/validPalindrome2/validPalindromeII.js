@@ -3,7 +3,7 @@
  * @return {boolean}
  
  */
-
+// helper function
 const isValidPalindrome = (s, left, right) => {
     while(left < right){
         if(s[left] !== s[right]){
