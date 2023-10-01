@@ -7,3 +7,10 @@ K-decker cheeseburger, which alternates between buns, cheese, and patty starting
 S single cheeseburgers and 
 �
 D double cheeseburgers. Each provides you with two buns, though a single provides one patty and one cheese, while a double provides two patties and two cheese. */
+
+const can_build_decker = (S,D,K) =>{
+    let total_buns = 2 * (S + D);
+    let total_patties = S + 2 * D
+    let total_cheese = S + 2 * D
+    return total_buns >= 2 * K && total_patties >= K && total_cheese >= K ? "YES" : "No"
+}   
