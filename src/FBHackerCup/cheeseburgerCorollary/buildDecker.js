@@ -14,3 +14,6 @@ const can_build_decker = (S,D,K) =>{
     let total_cheese = S + 2 * D
     return total_buns >= 2 * K && total_patties >= K && total_cheese >= K ? "YES" : "No"
 }   
+export default function main(){
+    
+}
