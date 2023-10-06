@@ -7,8 +7,8 @@ export default function moveZero(nums){
     while(right < nums.length){
         if(nums[right] !== 0){
             [nums[left],nums[right]] = [nums[right], nums[left]];
-            left++
+            left++;
         }
-        right++
+        right++;
     }
 }
