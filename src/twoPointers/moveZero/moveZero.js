@@ -5,7 +5,9 @@ export default function moveZero(nums){
     let left = 0;
     let right = 0;
     while(right < nums.length){
+        // if right num is not = 0
         if(nums[right] !== 0){
+            
             [nums[left],nums[right]] = [nums[right], nums[left]];
             left++;
         }
