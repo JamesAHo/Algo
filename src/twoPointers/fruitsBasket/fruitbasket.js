@@ -7,7 +7,7 @@ export default function totalFruit(fruits){
     let left = 0;
     let right = 0;
     let basket = new Map();
-    let ans = 0
+    let ans = 0;
     while(right < fruits.length){
         // add fruit into basket 
         basket.set(fruits[right],(fruits[right] || 0) + 1);
