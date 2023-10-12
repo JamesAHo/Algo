@@ -9,7 +9,7 @@ import buildGraph from "../buildGraph/buildGraph";
 export default function courseSchedule(numCourses, prerequisites){
     let visited = new Set();
     let graph = buildGraph(prerequisites)
-    console.log(graph)
+    console.log(graph);
     for(let course = 0; course < numCourses; course++){
         if(!explore(graph,course,visited)){
             return false;
