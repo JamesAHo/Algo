@@ -10,6 +10,7 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
   */
 export default function groupAnagram(strs){
     if(strs.length == 0) return [[" "]];
+    // hashMap
     let hashMap = new Map();
     let sortedWord = strs.split('').sort().join(" ");
     for(let word of strs){
