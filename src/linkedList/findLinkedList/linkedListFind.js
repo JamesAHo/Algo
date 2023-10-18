@@ -14,3 +14,13 @@ const linkedListFind = (head, target) => {
     }
     return false;
   };
+// recursively approach the linked list
+
+
+const linkedListFind2 = (head, target) => {
+    // base case 1: if head.val equals target, then return true
+    if(head === null ) return false;
+    // base case 2: if head is null, then return false
+    if(head.val === target) return true;
+    return linkedListFind2(head.next, target)
+  };
