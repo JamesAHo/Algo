@@ -26,7 +26,7 @@ export default function evalRPN(tokens){
                     stack.push(operand1 * operand2);
                     break;
                 case '/':
-                    stack.push(Math.trunc(operand1/operand2)) // truncate division
+                    stack.push(Math.trunc(operand1/operand2)); // truncate division
                     break;
             }
         }
