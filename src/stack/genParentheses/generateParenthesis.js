@@ -1,7 +1,6 @@
 // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
 export default function generateParenthesis(n){
-    const stack = [];
     let res = []
 
     let iterate = (str, open, close) =>{
