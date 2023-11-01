@@ -13,6 +13,6 @@ export default function generateParenthesis(n){
         iterate(str + ')', open, close+1)
     }
 
-    iterate('',0,0)
+    iterate('',0,0);
     return res;
 }
