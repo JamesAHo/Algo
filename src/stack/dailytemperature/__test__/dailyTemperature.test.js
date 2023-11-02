@@ -1,0 +1,1 @@
+import dailyTemperature from "../dailyTemperature";
