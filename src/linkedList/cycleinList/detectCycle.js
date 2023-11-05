@@ -18,7 +18,7 @@ export default function hasCycle(head){
         slow = slow.next;
         fast = fast.next.next
         if(slow === fast){
-            return true
+            return true;
         }
     }
     return false;
