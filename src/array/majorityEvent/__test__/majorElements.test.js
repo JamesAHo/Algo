@@ -8,3 +8,9 @@ describe('return the majority element', () => {
         
     })
 })
+describe('return the majority element', () => {
+    it('Should return 7', () => {
+        expect(majorityEle([7,7,5,7,5,1,5,7,5,5,7,7,5,5,5,5,7,7,7,7,7,7,7,7])).toBe(7);
+        
+    })
+})
