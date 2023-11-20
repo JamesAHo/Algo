@@ -14,3 +14,9 @@ describe('return the majority element', () => {
         
     })
 })
+describe('return the majority element', () => {
+    it('Should return 3', () => {
+        expect(majorityEle([3,2,3])).toBe(3);
+        
+    })
+})
