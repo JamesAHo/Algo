@@ -31,3 +31,24 @@ describe('kthSmallest', () => {
 
     // Add more test cases as needed
 });
+
+describe('kthSmallest', () => {
+    test('returns the kth smallest element in a BST', () => {
+        // Input BST:      5
+        //                 / \
+        //                3   6
+        //               / \   \
+        //              2   4   null
+        //             /
+        //            1
+        const root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(4);
+        root.left.left.left = new TreeNode(1);
+
+        expect(kthSmallest(root, 3)).toBe(3);
+    });
+
+});
