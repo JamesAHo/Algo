@@ -11,7 +11,7 @@
  * @param {number} k
  * @return {number}
  */
-var kthSmallest = function(root, k) {
+export default function kthSmallest(root, k) {
     let res = [];
     if(root === null) return null;
     function traverse(node){
