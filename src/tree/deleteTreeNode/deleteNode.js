@@ -33,6 +33,7 @@ export default function deleteNode(root, key) {
     return root;
 }
 // helper function to find the minimum node in a tree
+// iterate the left subtree until we reach the left leaf
 function findMin(node){
     while(node.left !== null){
         node = node.left;
