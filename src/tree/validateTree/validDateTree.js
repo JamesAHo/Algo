@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 export default function isValidTree(root, min, max) {
-    if(root === null) return true;
-    if(root.val <= min || root.val >= max) return false;
-    return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+   if(root === null) return true;
+   if(root.val <= min || root.val >= max) return false;
+   return isValidTree(root.left, min, root.val) && isValidTree(root.right, root.val, max);
 };
