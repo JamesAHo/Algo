@@ -10,6 +10,8 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
+// min for left subtree is -Infinity
+// max for right subtree is Infinity
 export default function isValidTree(root, min, max) {
    if(root === null) return true;
    if(root.val <= min || root.val >= max) return false;
